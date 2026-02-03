@@ -13,7 +13,7 @@
 
     - name: Rewrite default index.html
       template:
-        src: default_index.html.j2
+        src: index.j2
         dest: /usr/share/nginx/html/index.html
       notify:
         - Restart nginx
