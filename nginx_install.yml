@@ -18,7 +18,7 @@
       notify:
         - Restart nginx
 
-    - name: Enable nginx ports on firewall
+    - name: Enable http port on firewall
       firewalld:
         port: 80/tcp
         permanent: true
@@ -30,8 +30,6 @@
         name: nginx
         state: started
         enabled: true
-        persistent: true
-        immediate: true
 
   handlers:
     - name: Restart nginx
