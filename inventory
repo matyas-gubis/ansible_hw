@@ -1,0 +1,2 @@
+[webservers]
+web.homework ansible_user=homework ansible_password=homework ansible_become_password=homework
