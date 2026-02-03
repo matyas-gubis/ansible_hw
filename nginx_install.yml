@@ -18,8 +18,15 @@
       notify:
         - Restart nginx
 
+    - name: Enable nginx ports on firewall
+      firewalld:
+        port: 80/tcp
+        permanent: true
+        state: enabled
+
   handlers:
     - name: Restart nginx
       service:
         name: nginx
         state: restarted
+        enabled: true
